@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:id="@+id/find_mainview"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/find_text"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content">
+
+        <AutoCompleteTextView
+                android:id="@+id/find_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter order id"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true"/>
+
+    </android.support.design.widget.TextInputLayout>
+    <Button
+        android:id="@+id/find_button"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/find_text"
+        android:layout_marginTop="16dp"
+        android:text="Find order"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/find_notfound"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+            <TextView
+                android:textSize="20sp"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:text="Sorry, nothing found :("
+                android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>
