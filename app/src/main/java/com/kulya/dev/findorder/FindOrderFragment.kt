@@ -1,6 +1,7 @@
 package com.kulya.dev.findorder
 
 import android.os.Bundle
+import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatDialogFragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +10,7 @@ import com.kulya.dev.findorder.ex.hide
 import com.kulya.dev.findorder.ex.show
 import kotlinx.android.synthetic.main.fragment_find_order.*
 
-class FindOrderFragment:AppCompatDialogFragment() {
+class FindOrderFragment:Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_find_order, container, false)
@@ -19,7 +20,7 @@ class FindOrderFragment:AppCompatDialogFragment() {
         super.onViewCreated(view, savedInstanceState)
         find_button.setOnClickListener {
             if (find_order.text.isNotEmpty()){
-                openMapFragment()
+//                openMapFragment()
             }else{
                 find_mainview.hide()
                 find_notfound.show()
